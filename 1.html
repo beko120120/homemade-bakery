@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عمايل إيديا | Homemade Bakery - طازة من الفرن لإيدك</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo & Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    },
+                    colors: {
+                        bakery: {
+                            base: '#0f0c0a',
+                            surface: '#181410',
+                            card: '#221b16',
+                            cardHover: '#2a221c',
+                            gold: '#e0a96d',
+                            goldHover: '#c99256',
+                            accent: '#eb7734',
+                            border: '#382b22',
+                            textMuted: '#a39282'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0f0c0a;
+            color: #f7f4ee;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glow-gold {
+            box-shadow: 0 0 35px -8px rgba(224, 169, 109, 0.25);
+        }
+        .shimmer {
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(224,169,109,0.15) 50%, rgba(255,255,255,0) 100%);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+    </style>
+</head>
+<body class="selection:bg-bakery-gold selection:text-bakery-base pb-32">
+
+    <!-- Header & Hero Section الفاخر -->
+    <header class="relative border-b border-bakery-border bg-gradient-to-b from-[#1c1510] via-bakery-surface to-bakery-base pt-8 pb-6 px-4">
+        <div class="max-w-3xl mx-auto flex flex-col items-center text-center">
+            
+            <!-- شارة الفرن شغال والطلب الفريش -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-bakery-gold/10 border border-bakery-gold/30 text-bakery-gold text-xs font-bold mb-4 shadow-sm">
+                <span class="w-2.5 h-2.5 rounded-full bg-bakery-accent animate-ping"></span>
+                <span>الفرن شغال.. بيتخبز مخصوص وقت طلبك أول بأول 🔥</span>
+            </div>
+
+            <!-- اسم البراند وشعاره -->
+            <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight flex items-center justify-center gap-2">
+                <span>عمايل إيديا</span>
+                <span class="text-bakery-gold text-2xl sm:text-3xl font-serif italic">Homemade Bakery</span>
+            </h1>
+            
+            <p class="text-sm sm:text-base text-bakery-textMuted mt-2 max-w-lg leading-relaxed font-semibold">
+                طازة من الصاج لإيدك.. من غير تسخين ولا تخزين، كل صنف بيتجهز طازة بنَفَس ومكونات بيت حقيقية 100%.
+            </p>
+
+            <!-- كروت المزايا والزوائد السريعة -->
+            <div class="grid grid-cols-3 gap-2 w-full max-w-md mt-5 text-[11px] font-bold">
+                <div class="p-2.5 rounded-xl bg-bakery-card border border-bakery-border flex flex-col items-center text-gray-300">
+                    <i class="fas fa-fire-burner text-bakery-gold text-base mb-1"></i>
+                    <span>طازة أول بأول</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-bakery-card border border-bakery-border flex flex-col items-center text-gray-300">
+                    <i class="fas fa-sliders text-bakery-gold text-base mb-1"></i>
+                    <span>متاح إضافات وتعديل</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-bakery-card border border-bakery-border flex flex-col items-center text-gray-300">
+                    <i class="fas fa-shield-heart text-bakery-gold text-base mb-1"></i>
+                    <span>سمنة بلدي ونظافة بيت</span>
+                </div>
+            </div>
+
+            <!-- أزرار التواصل المباشر -->
+            <div class="flex items-center gap-3 w-full max-w-sm mt-5">
+                <a href="https://wa.me/201043554348" target="_blank" class="flex-1 py-2.5 px-4 bg-emerald-950/80 border border-emerald-500/40 hover:bg-emerald-600 text-emerald-400 hover:text-white rounded-xl text-xs font-black flex items-center justify-center gap-2 transition duration-300 shadow-lg">
+                    <i class="fab fa-whatsapp text-base"></i>
+                    <span>واتساب للطلب: 01043554348</span>
+                </a>
+                <a href="tel:01097668822" class="py-2.5 px-4 bg-bakery-card border border-bakery-border hover:border-bakery-gold text-white rounded-xl text-xs font-black flex items-center justify-center gap-2 transition duration-300">
+                    <i class="fas fa-phone-volume text-bakery-gold"></i>
+                    <span>اتصال</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- شريط البحث السريع والفلترة -->
+    <div class="sticky top-0 z-30 bg-bakery-base/95 backdrop-blur-md border-b border-bakery-border/80 py-3 px-4 shadow-xl">
+        <div class="max-w-3xl mx-auto space-y-3">
+            <div class="relative">
+                <i class="fas fa-search absolute right-4 top-3.5 text-bakery-textMuted text-sm"></i>
+                <input type="text" id="searchInput" placeholder="ابحث عن صنفك المفضل.. (فطير، بسبوسة، حواوشي...)" 
+                       class="w-full bg-bakery-surface border border-bakery-border rounded-xl py-2.5 pr-11 pl-4 text-xs sm:text-sm text-gray-200 placeholder-bakery-textMuted focus:outline-none focus:border-bakery-gold transition">
+            </div>
+
+            <div class="flex items-center gap-2 overflow-x-auto hide-scrollbar text-xs font-bold" id="categoryTabs">
+                <button onclick="filterCategory('all')" class="category-btn active-tab px-4 py-2 rounded-xl bg-bakery-gold text-bakery-base whitespace-nowrap shadow-md transition" data-cat="all">القائمة كاملة</button>
+                <button onclick="filterCategory('sweets')" class="category-btn px-4 py-2 rounded-xl bg-bakery-surface text-bakery-textMuted hover:text-white border border-bakery-border whitespace-nowrap transition" data-cat="sweets">حلويات وشرقي فريش</button>
+                <button onclick="filterCategory('bakery')" class="category-btn px-4 py-2 rounded-xl bg-bakery-surface text-bakery-textMuted hover:text-white border border-bakery-border whitespace-nowrap transition" data-cat="bakery">فطير ومخبوزات بلدي</button>
+                <button onclick="filterCategory('savory')" class="category-btn px-4 py-2 rounded-xl bg-bakery-surface text-bakery-textMuted hover:text-white border border-bakery-border whitespace-nowrap transition" data-cat="savory">موالح ونواشف سخنة</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- شبكة الأصناف (Menu Items) -->
+    <main class="max-w-3xl mx-auto px-4 mt-6">
+        <div id="itemsContainer" class="space-y-4">
+            <!-- سيتم حقن كروت الأصناف التفاعلية من الجافاسكريبت -->
+        </div>
+    </main>
+
+    <!-- شريط السلة العائم السفلي (Floating Interactive Cart) -->
+    <div id="floatingCart" class="fixed bottom-4 inset-x-4 max-w-3xl mx-auto hidden z-40">
+        <div class="bg-bakery-surface/95 border border-bakery-gold/40 rounded-2xl p-3.5 shadow-2xl flex items-center justify-between backdrop-blur-md shimmer">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-bakery-gold text-bakery-base flex items-center justify-center font-black text-lg shadow-lg">
+                    <span id="cartCount">0</span>
+                </div>
+                <div>
+                    <div class="text-[11px] text-bakery-textMuted font-bold">إجمالي طلبك الطازج:</div>
+                    <div class="text-base font-black text-bakery-gold"><span id="cartTotal">0</span> ج.م</div>
+                </div>
+            </div>
+            <button onclick="toggleCartModal(true)" class="bg-bakery-gold hover:bg-bakery-goldHover text-bakery-base font-black text-xs sm:text-sm px-5 py-3 rounded-xl flex items-center gap-2 shadow-lg transition">
+                <span>تحديد الإضافات وإرسال الأوردر</span>
+                <i class="fas fa-arrow-left"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- نافذة تفاصيل السلة واختيار الإضافات والطلب (Checkout Modal) -->
+    <div id="cartModal" class="fixed inset-0 bg-black/85 z-50 hidden backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4">
+        <div class="bg-bakery-surface border border-bakery-border w-full max-w-lg rounded-t-3xl sm:rounded-3xl max-h-[92vh] flex flex-col overflow-hidden shadow-2xl">
+            
+            <div class="p-4 border-b border-bakery-border flex items-center justify-between bg-bakery-card">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-basket-shopping text-bakery-gold text-lg"></i>
+                    <div>
+                        <h3 class="font-black text-sm text-white">سلة الأوردر الطازج</h3>
+                        <p class="text-[10px] text-bakery-textMuted">بيتخبز أول بأول مخصوص لحضرتك</p>
+                    </div>
+                </div>
+                <button onclick="toggleCartModal(false)" class="text-bakery-textMuted hover:text-white p-1 text-lg">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- قائمة الأصناف في السلة -->
+            <div id="cartItemsList" class="p-4 overflow-y-auto space-y-3 flex-1 divide-y divide-bakery-border/50">
+            </div>
+
+            <!-- خيارات الإضافات والملاحظات وبيانات العميل -->
+            <div class="p-4 bg-bakery-base border-t border-bakery-border space-y-3">
+                <div class="space-y-2 text-xs">
+                    <div>
+                        <label class="block text-[11px] font-bold text-bakery-gold mb-1">
+                            <i class="fas fa-wand-magic-sparkles mr-1"></i> طلبات خاصة أو زوائد وإضافات (اختياري):
+                        </label>
+                        <input type="text" id="custExtras" placeholder="مثال: تسوية زيادة، شربات خفيف، مكسرات زيادة..." 
+                               class="w-full bg-bakery-surface border border-bakery-border rounded-xl p-2.5 text-white placeholder-bakery-textMuted focus:outline-none focus:border-bakery-gold">
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <input type="text" id="custName" placeholder="الاسم الكريم *" class="w-full bg-bakery-surface border border-bakery-border rounded-xl p-2.5 text-white placeholder-bakery-textMuted focus:outline-none focus:border-bakery-gold">
+                        <input type="text" id="custAddress" placeholder="عنوان التوصيل بالتفصيل *" class="w-full bg-bakery-surface border border-bakery-border rounded-xl p-2.5 text-white placeholder-bakery-textMuted focus:outline-none focus:border-bakery-gold">
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-2 border-t border-bakery-border/50">
+                    <span class="text-xs text-bakery-textMuted font-bold">الحساب الإجمالي:</span>
+                    <span class="text-xl font-black text-bakery-gold"><span id="modalTotal">0</span> ج.م</span>
+                </div>
+
+                <button onclick="sendOrderViaWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-lg transition duration-200">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span class="text-sm">تأكيد الأوردر وإرساله للفرن عبر واتساب</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- كود الجافاسكريبت التفاعلي الكامل -->
+    <script>
+        const WHATSAPP_NUMBER = "201043554348";
+
+        // قاعدة بيانات الـ 18 صنفاً مع الأوصاف الطازجة والتسعير
+        const products = [
+            // حلويات وشرقي
+            { id: 1, name: "رموش الست", category: "sweets", price: 150, unit: "للكيلو", desc: "مرملة ودايبة دوبان بالسمنة البلدي وشربات مظبوط عيار الذهب", tag: "الأكثر طلباً", image: "https://i.ytimg.com/vi/nEyQbEhgp2M/maxresdefault.jpg?auto=format&fit=crop&w=350&q=80" },
+            { id: 2, name: "كيكة الرواني (الريفاني)", category: "sweets", price: 100, unit: "للصينية", desc: "كيكة سميد فاخرة هشة وخفيفة، تتسقى بالشربات سخنة فور خروجها", tag: "طازجة بالصينية", image: "https://media.elbalad.news/2024/10/large/852/6/56.jpg?auto=format&fit=crop&w=350&q=80" },
+            { id: 3, name: "الكيكة العادية اليومية", category: "sweets", price: 100, unit: "للصينية", desc: "كيكة شاي بيتي قطنية أصيلة بنكهة الفانيليا الغنية وريحة زمان", tag: "صينية عائلية", image: "https://cdn.al-ain.com/images/2019/9/09/47-172244-sponge-cake-recipe_700x400.jpeg?auto=format&fit=crop&w=350&q=80" },
+            { id: 4, name: "البسبوسة المرملة", category: "sweets", price: 100, unit: "للصينية", desc: "بسبوسة ذهبية متماسكة بالسمن الطبيعي، طعم بيتي مظبوط بالسنتي", tag: "شرقي أصيل", image: "https://media.elbalad.news/2024/10/large/1036/2/510.jpeg?auto=format&fit=crop&w=350&q=80" },
+            { id: 5, name: "سينا بون بالقرفة والصوص", category: "sweets", price: 50, unit: "للواحدة", desc: "رول قرفة طري غرقان بالصوص الكريمي الغني، دافي ولذيذ", tag: "مخبوز مخصوص", image: "https://img.youm7.com/ArticleImgs/2022/12/19/57767-%D9%85%D9%83%D9%88%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D9%8A%D9%86%D8%A7%D8%A8%D9%88%D9%86.jpg?auto=format&fit=crop&w=350&q=80" },
+            { id: 6, name: "دوناتس مشكلة فاخرة", category: "sweets", price: 100, unit: "3 قطع", desc: "عجينة قطنية مقلية ومصفاة بعناية مع جناش شوكولاتة وتزيين سكر", tag: "بوكس 3 قطع", image: "https://www.exception-group.com/wp-content/uploads/2023/04/4BK0807101-3.webp?auto=format&fit=crop&w=350&q=80" },
+
+            // فطير ومخبوزات بلدي
+            { id: 7, name: "فطير مشلتت (سمنة بلدي)", category: "bakery", price: 150, unit: "للفطيرة", desc: "مورق رقة رقة بالسمن البلدي الفلاحي الصافي 100%، يخرج لك مقرمش من بره ودايب من جوه", tag: "توب الأصالة", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROgMSsEGlgglWCBAc-Abyny9EfVqXHE0vdb27WiDpvSw&s=10?auto=format&fit=crop&w=350&q=80" },
+            { id: 8, name: "فطير مشلتت (سمنة روابي)", category: "bakery", price: 75, unit: "للفطيرة", desc: "توريقة ممتازة وخفيفة على المعدة بالسمن النباتي المظبوط", tag: "خفيف واقتصادي", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUVTCwNHMu3U5l8RczKmCQtvHBPXuBlgfY3Dqdcwr4pNL0sNQ1XJBi51I&s=10?auto=format&fit=crop&w=350&q=80" },
+            { id: 9, name: "قرص بعجينة الفايش (سادة)", category: "bakery", price: 120, unit: "للكيلو", desc: "مخمورة بالخميرة الفلاحي الأصيلة وطعمها يرجعك لأيام الخير والبركة", tag: "خميرة فلاحي", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkPM78WhdFAiVgsJBLpcUh13xYh6i7wOuaXaoAnMM1Fw&s=10?auto=format&fit=crop&w=350&q=80" },
+            { id: 10, name: "قرص بعجينة الفايش (بالعجوة)", category: "bakery", price: 150, unit: "للكيلو", desc: "محشية عجوة طرية مغذية ومتبلة بأصالة ونكهة الفايش الصعيدي", tag: "غنية بالعجوة", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiRqxBawooqEkQFrE-DGEPfYhgxgqrD5eOFFUmyKsX-A&s=10?auto=format&fit=crop&w=350&q=80" },
+            { id: 11, name: "قرص طرية فلاحي باللبن الرايب", category: "bakery", price: 120, unit: "للكيلو", desc: "معجونة باللبن الرايب والقشطة، طرية زي الإسفنج وتؤكل حاف من حلاوتها", tag: "الأكثر مبيعاً", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTsXCzJQNkjs8WrO9mi41wAfqYFd5kHmVIj6ON0x8nAg&s=10?auto=format&fit=crop&w=350&q=80" },
+
+            // موالح ونواشف
+            { id: 12, name: "باتيه بالجبنة المورق", category: "savory", price: 120, unit: "للكيلو", desc: "طبقات عجين مورقة ومقرمشة مع حشوة جبنة بيضاء شهية", tag: "موالح الفرن", image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=350&q=80" },
+            { id: 13, name: "البوريك بالجبنة وحبة البركة", category: "savory", price: 100, unit: "للكيلو", desc: "بوريك تركي بنكهة مصرية بحبة البركة والسمسم ولون ذهبي محمر", tag: "سناكس شاي", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnJKD5IN8vK47va8ZOU8777k5ENzPglHlP2U4bEeSvOQ&s=10?auto=format&fit=crop&w=350&q=80" },
+            { id: 14, name: "معمول بالعجوة الفاخر", category: "savory", price: 110, unit: "للكيلو", desc: "ناعم يذوب في الفم، بنقشة بيتي مميزة ومحشو بأجود أنواع العجوة", tag: "ناعم ودايب", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8mMJ46E65Ox7hsC0dmJavfj9Dl5uxhS9EQgYfd4-tUQ&s=10?auto=format&fit=crop&w=350&q=80" },
+            { id: 15, name: "قراقيش سادة مقرمشة", category: "savory", price: 100, unit: "للكيلو", desc: "مقرمشة ومحمصة ومظبوطة تماماً مع كوباية الشاي بلبن الصباحي", tag: "نواشف الصباح", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtttYWrNJeenr-N4ir1JOb0gv2iIBnEE4Bv19QiROrGw&s=10?auto=format&fit=crop&w=350&q=80" },
+            { id: 16, name: "ميني بيتزا مشكلة (جبنة)", category: "savory", price: 120, unit: "للكيلو", desc: "عجينة قطنية غنية بصلصة الطماطم المتبلة والزيتون والجبنة السايحة", tag: "مناسبات وأطفال", image: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=350&q=80" },
+            { id: 17, name: "ميني بيتزا قطع الفراخ", category: "savory", price: 170, unit: "للكيلو", desc: "ميني بيتزا معززة بقطع الفراخ المتبلة والموتزاريلا الطازجة", tag: "سوبر سبيشال", image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=350&q=80" },
+            { id: 18, name: "عيش بلحمة بلدي (حواوشي)", category: "savory", price: 50, unit: "للرغيف", desc: "رغيف محشي لحمة بلدي متبلة بالبصل والبهارات، بيستوي ويطلع مقرمش وسخن مولع", tag: "سخن من الصاج", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXDG3f1bImlh2ahi4wGwaYGpAECgZECZDefCHtlrbFWAdNB_GbQFu3Xmv_&s=10?auto=format&fit=crop&w=350&q=80" }
+        ];
+
+        let cart = {};
+
+        // عرض المنتجات في الصفحة بتنسيق بطاقات أفقية أنيقة
+        function renderMenu(items) {
+            const container = document.getElementById('itemsContainer');
+            if (items.length === 0) {
+                container.innerHTML = `<div class="text-center py-12 text-bakery-textMuted text-sm">عفواً، لا توجد مخبوزات مطابقة للبحث حالياً.</div>`;
+                return;
+            }
+            container.innerHTML = items.map(item => `
+                <div class="bg-bakery-surface border border-bakery-border rounded-2xl p-3 sm:p-4 flex items-center justify-between gap-3 hover:border-bakery-gold/50 transition duration-300">
+                    <div class="flex items-center gap-3.5 flex-1 min-w-0">
+                        <img src="${item.image}" alt="${item.name}" class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover border border-bakery-border shadow-md flex-shrink-0">
+                        <div class="flex-1 min-w-0">
+                            <span class="inline-block text-[10px] bg-bakery-gold/15 border border-bakery-gold/30 text-bakery-gold font-bold px-2 py-0.5 rounded-full mb-1">
+                                ${item.tag}
+                            </span>
+                            <h4 class="font-extrabold text-white text-sm sm:text-base truncate leading-tight">${item.name}</h4>
+                            <p class="text-[11px] text-bakery-textMuted line-clamp-2 mt-1 leading-relaxed">${item.desc}</p>
+                            <div class="text-xs sm:text-sm font-black text-bakery-gold mt-2">
+                                ${item.price} ج.م <span class="text-[10px] font-normal text-bakery-textMuted">/ ${item.unit}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="addToCart(${item.id})" class="w-11 h-11 rounded-xl bg-bakery-card hover:bg-bakery-gold hover:text-bakery-base text-bakery-gold flex items-center justify-center border border-bakery-border hover:shadow-lg transition flex-shrink-0 active:scale-95">
+                        <i class="fas fa-plus text-base"></i>
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        // إضافة وإدارة السلة
+        function addToCart(id) {
+            cart[id] = (cart[id] || 0) + 1;
+            updateCartUI();
+        }
+
+        function updateQuantity(id, delta) {
+            if (!cart[id]) return;
+            cart[id] += delta;
+            if (cart[id] <= 0) delete cart[id];
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            let total = 0;
+            let count = 0;
+            const cartItemsList = document.getElementById('cartItemsList');
+            let itemsHtml = '';
+
+            for (const id in cart) {
+                const item = products.find(p => p.id == id);
+                const qty = cart[id];
+                const itemTotal = item.price * qty;
+                total += itemTotal;
+                count += qty;
+
+                itemsHtml += `
+                    <div class="flex items-center justify-between pt-3">
+                        <div>
+                            <div class="font-bold text-sm text-white">${item.name}</div>
+                            <div class="text-xs text-bakery-gold font-semibold">${item.price} ج.م × ${qty} = ${itemTotal} ج.م</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button onclick="updateQuantity(${item.id}, -1)" class="w-7 h-7 rounded-lg bg-bakery-card border border-bakery-border text-gray-200 flex items-center justify-center text-xs hover:border-bakery-gold">-</button>
+                            <span class="text-sm font-bold w-5 text-center">${qty}</span>
+                            <button onclick="updateQuantity(${item.id}, 1)" class="w-7 h-7 rounded-lg bg-bakery-card border border-bakery-border text-gray-200 flex items-center justify-center text-xs hover:border-bakery-gold">+</button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            document.getElementById('cartCount').innerText = count;
+            document.getElementById('cartTotal').innerText = total;
+            document.getElementById('modalTotal').innerText = total;
+
+            const floatingCart = document.getElementById('floatingCart');
+            if (count > 0) {
+                floatingCart.classList.remove('hidden');
+                cartItemsList.innerHTML = itemsHtml;
+            } else {
+                floatingCart.classList.add('hidden');
+                cartItemsList.innerHTML = `<div class="text-center py-10 text-bakery-textMuted text-xs">سلتك فارغة.. اختر ما تشتهيه من الفرن!</div>`;
+                toggleCartModal(false);
+            }
+        }
+
+        function toggleCartModal(show) {
+            const modal = document.getElementById('cartModal');
+            if (show) modal.classList.remove('hidden');
+            else modal.classList.add('hidden');
+        }
+
+        // إرسال تفاصيل الأوردر المنسق مباشرة إلى واتساب
+        function sendOrderViaWhatsApp() {
+            const name = document.getElementById('custName').value.trim();
+            const address = document.getElementById('custAddress').value.trim();
+            const extras = document.getElementById('custExtras').value.trim();
+
+            if (!name || !address) {
+                alert('من فضلك اكتب الاسم الكريم وعنوان التوصيل بالتفصيل لنبدأ التجهيز فوراً');
+                return;
+            }
+
+            let orderText = `*أوردر جديد - عمايل إيديا | Homemade Bakery* 🥧🔥\n`;
+            orderText += `_(مطلوب خبزه وتحضيره طازة أول بأول)_\n\n`;
+            orderText += `👤 *العميل:* ${name}\n`;
+            orderText += `📍 *العنوان:* ${address}\n`;
+            if (extras) {
+                orderText += `✨ *طلبات خاصة وزوائد:* ${extras}\n`;
+            }
+            orderText += `\n*الأصناف المطلوبة من الفرن:*\n`;
+
+            let total = 0;
+            for (const id in cart) {
+                const item = products.find(p => p.id == id);
+                const qty = cart[id];
+                const itemTotal = item.price * qty;
+                total += itemTotal;
+                orderText += `▫️ ${item.name} [ ${qty} ${item.unit} ] = ${itemTotal} ج.م\n`;
+            }
+
+            orderText += `\n💰 *الحساب الإجمالي:* ${total} ج.م\n`;
+            orderText += `\nيرجى تأكيد استلام الطلب والبدء في الخبز، شكراً لكم!`;
+
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(orderText)}`;
+            window.open(url, '_blank');
+        }
+
+        // فلترة الأقسام
+        function filterCategory(cat) {
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('bg-bakery-gold', 'text-bakery-base');
+                btn.classList.add('bg-bakery-surface', 'text-bakery-textMuted');
+            });
+            event.target.classList.add('bg-bakery-gold', 'text-bakery-base');
+            event.target.classList.remove('bg-bakery-surface', 'text-bakery-textMuted');
+
+            if (cat === 'all') renderMenu(products);
+            else renderMenu(products.filter(p => p.category === cat));
+        }
+
+        // بحث لحظي
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const q = e.target.value.toLowerCase();
+            const filtered = products.filter(p => p.name.includes(q) || p.desc.includes(q));
+            renderMenu(filtered);
+        });
+
+        // التشغيل التلقائي عند التحميل
+        renderMenu(products);
+    </script>
+</body>
+</html>
